@@ -43,7 +43,8 @@ was successfully created.' }
   def update
     respond_to do |format|
       if @phone_number.update(phone_number_params)
-        format.html { redirect_to @phone_number, notice: 'Phone number was successfully updated.' }
+        format.html { redirect_to @phone_number.person, notice: 'Phone number
+was successfully updated.' }
         format.json { render :show, status: :ok, location: @phone_number }
       else
         format.html { render :edit }
